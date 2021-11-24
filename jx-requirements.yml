@@ -6,21 +6,21 @@ spec:
     schedule: ""
   cluster:
     chartRepository: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
-    clusterName: kind
+    clusterName: vv-dev
     devEnvApprovers:
-    - todo
-    environmentGitOwner: todo
-    gitKind: github
-    gitName: github
-    gitServer: https://github.com
+    - svcngcc
+    environmentGitOwner: svcngcc
+    gitKind: gitlab
+    gitName: gitlab
+    gitServer: https://gitlab-master.nvidia.com
     provider: kubernetes
-    registry: ghcr.io
+    registry: sc-hw-artf.nvidia.com
   environments:
   - key: dev
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: "jenkins-x.nonprod-nvkong.com"
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
